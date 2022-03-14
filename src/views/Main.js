@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import BlogCard from '../components/BlogCard/BlogCard.js';
 
-// import BlogCard from '../BlogCard/BlogCard.js';
-
-// import { useState, useEffect } from 'react/cjs/react.production.min';
 
 import getBlog from '../services/blogs';
 
@@ -21,7 +19,17 @@ export default function Main() {
     fetchData();
   }, []); 
   return (
+    <div className='main'>main
+      {blogs.map((data) => (
+      
+        <BlogCard key={data.id} 
+          title={data.title}
+          subtitle={data.subtitle}
+          text={data.text} 
+          image={data.image} />
+      ))}
     
-    <div>main</div>
+    </div>
+
   );
 }

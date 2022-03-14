@@ -11,25 +11,18 @@ export default function Main() {
     const fetchData = async () => {
       const response = await getBlog();
       setBlogs(response);
-
-
     };
-
-
     fetchData();
   }, []); 
   return (
     <div className='main'>main
       {blogs.map((data) => (
-      
         <BlogCard key={data.id} 
           title={data.title}
           subtitle={data.subtitle}
           text={data.text} 
           image={data.image} />
       ))}
-    
     </div>
-
   );
 }

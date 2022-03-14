@@ -1,4 +1,3 @@
-import React from 'react';
 import { client, checkError } from './client';
 
 export default function getBlog() {
